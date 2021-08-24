@@ -3,6 +3,7 @@ import random
 import time
 import numpy as np
 
+
 class Nim():
 
     def __init__(self, initial=[1, 3, 5, 7]):
@@ -162,7 +163,7 @@ class NimAI():
         If multiple actions have the same Q-value, any of those
         options is an acceptable return value.
         """
-        actions=self.actions_dict(tuple(state))  # DICT {action:Q}
+        actions = self.actions_dict(tuple(state))  # DICT {action:Q}
         if not epsilon:
             return max(actions, key=actions.get)
         else:
